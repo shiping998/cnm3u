@@ -4,13 +4,13 @@ whiteList = OrderedDict()
 blackList = {}
 
 # 读取白名单
-with open("whitelist.txt", 'r') as fin:
+with open("whitelist.txt", 'r', encoding='UTF-8') as fin:
     for aline in fin:
         aline = aline.strip()
         if aline != "":
             whiteList[aline] = []
 # 读取黑名单
-with open("blacklist.txt", "r") as fin:
+with open("blacklist.txt", "r", encoding='UTF-8') as fin:
     for aline in fin:
         aline = aline.strip()
         if aline != "":
@@ -39,7 +39,7 @@ def isInBlack(aStr):
     return False
 
 
-with open("cn.m3u", 'r') as fin:
+with open("cn.m3u", 'r', encoding='UTF-8') as fin:
     allLines = fin.readlines()
     fileLength = len(allLines)
     index = 0
